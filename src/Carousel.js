@@ -9,7 +9,6 @@ export default function Carousel( { onClose, number, imageData } ) {
 
     const SLIDER_STYLE = {
         position: 'relative',
-        display: '',
         height: '100vh',
         display: 'flex',
         justifyContent: 'center',
@@ -67,7 +66,6 @@ export default function Carousel( { onClose, number, imageData } ) {
                 <FaArrowAltCircleRight className="pagination-arrow" style={{...RIGHT_ARROW, ...ARROW}} onClick={nextSlide}  />
                 <span className="blured-background" style={{backgroundImage: "url(" + galery[current].image.source.replace("q_75,c_limit,f_auto,w_1940,h_1532", "q_75,c_limit,f_auto,w_45,h_45") + ")"}}></span>
                 {galery.map((slide, i) => {
-                    {/* console.log(galery[i].image.source) */}
                     return (
                         <div className={i === current ? 'slide active' : 'slide'} key={i+"current slide"}>
                         {i === current && (
