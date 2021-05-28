@@ -7,6 +7,7 @@ export default function Carousel( { onClose, number } ) {
 
     const [current, setCurrent] = useState(0);
     const galery = Data[number].galleryImages;
+    
     const SLIDER_STYLE = {
         position: 'relative',
         display: '',
@@ -63,22 +64,23 @@ export default function Carousel( { onClose, number } ) {
     const nextSlide = () => {
         setCurrent(current === galery.length - 1 ? 0 : current + 1)
     }
+    
     return (
         <>
             <section style={SLIDER_STYLE}>
-            <FaArrowAltCircleLeft style={{...LEFT_ARROW, ...ARROW}} onClick={pervSlide}  />
-            <FaArrowAltCircleRight style={{...RIGHT_ARROW, ...ARROW}} onClick={nextSlide}  />
-            <span className="blured-background" style={{backgroundImage: "url(" + galery[current].image.source.replace("q_75,c_limit,f_auto,w_1940,h_1532", "q_75,c_limit,f_auto,w_45,h_45") + ")"}}></span>
-            {galery.map((slide, i) => {
-                {/* console.log(galery[i].image.source) */}
-                return (
-                    <div className={i === current ? 'slide active' : 'slide'} key={i+"current slide"}>
-                    {i === current && (
-                        <img className="carousel-image" src={galery[i].image.source} alt={galery[i].image.alt}/>
-                    )}
-                    </div>
-                )
-            })}
+                <FaArrowAltCircleLeft style={{...LEFT_ARROW, ...ARROW}} onClick={pervSlide}  />
+                <FaArrowAltCircleRight style={{...RIGHT_ARROW, ...ARROW}} onClick={nextSlide}  />
+                <span className="blured-background" style={{backgroundImage: "url(" + galery[current].image.source.replace("q_75,c_limit,f_auto,w_1940,h_1532", "q_75,c_limit,f_auto,w_45,h_45") + ")"}}></span>
+                {galery.map((slide, i) => {
+                    {/* console.log(galery[i].image.source) */}
+                    return (
+                        <div className={i === current ? 'slide active' : 'slide'} key={i+"current slide"}>
+                        {i === current && (
+                            <img className="carousel-image" src={galery[i].image.source} alt={galery[i].image.alt}/>
+                        )}
+                        </div>
+                    )
+                })}
             </section>
             <nav style={NAVIGATION_STYLE}>
                 <div className="title-collection">
@@ -89,7 +91,7 @@ export default function Carousel( { onClose, number } ) {
                 <div className="thumb-collection">
                     {galery.map((thumb, i) => {
                         return (
-                            <span className={"thump-container " + (current === i ? 'red-border' : '')} style={{backgroundImage: "url(" + galery[i].image.source.replace("q_75,c_limit,f_auto,w_1940,h_1532", "q_75,c_limit,f_auto,w_85,h_85") + ")"}} key={i+"thumb slide"}></span>
+                            <span className={"thump-container " + (current === i ? 'red-border' : '')} style={{backgroundImage: "url(" + galery[i].image.source.replace("q_75,c_limit,f_auto,w_1940,h_1532", "q_75,c_limit,f_auto,w_85,h_85") + ")"}} key={i+"thumb slide"} onClick={() => setCurrent(i)}></span>
                         )
                     })
                     }

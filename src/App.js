@@ -6,7 +6,7 @@ import Carousel from './Carousel';
 export default function App() {
   const [isOpen, setIsOpen] = useState(false)
   const [galeryOpen, setGaleryOpen] = useState(0)
- 
+
   function whichGalery(i) {
     setGaleryOpen(i);
     setIsOpen(true);
