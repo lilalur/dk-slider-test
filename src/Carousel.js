@@ -3,11 +3,10 @@ import Data from './Data.json';
 import "./slide.css";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaChevronLeft } from 'react-icons/fa'
 
-export default function Carousel( { onClose } ) {
+export default function Carousel( { onClose, number } ) {
 
     const [current, setCurrent] = useState(0);
-    const galery = Data[0].galleryImages;
-
+    const galery = Data[number].galleryImages;
     const SLIDER_STYLE = {
         position: 'relative',
         display: '',
@@ -73,7 +72,7 @@ export default function Carousel( { onClose } ) {
             {galery.map((slide, i) => {
                 {/* console.log(galery[i].image.source) */}
                 return (
-                    <div className={i === current ? 'slide active' : 'slide'} key={i}>
+                    <div className={i === current ? 'slide active' : 'slide'} key={i+"current slide"}>
                     {i === current && (
                         <img className="carousel-image" src={galery[i].image.source} alt={galery[i].image.alt}/>
                     )}
@@ -90,7 +89,7 @@ export default function Carousel( { onClose } ) {
                 <div className="thumb-collection">
                     {galery.map((thumb, i) => {
                         return (
-                            <span className={"thump-container " + (current === i ? 'red-border' : '')} style={{backgroundImage: "url(" + galery[i].image.source.replace("q_75,c_limit,f_auto,w_1940,h_1532", "q_75,c_limit,f_auto,w_85,h_85") + ")"}}></span>
+                            <span className={"thump-container " + (current === i ? 'red-border' : '')} style={{backgroundImage: "url(" + galery[i].image.source.replace("q_75,c_limit,f_auto,w_1940,h_1532", "q_75,c_limit,f_auto,w_85,h_85") + ")"}} key={i+"thumb slide"}></span>
                         )
                     })
                     }

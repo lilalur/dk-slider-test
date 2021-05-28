@@ -30,5 +30,37 @@
                 }
             }
       ]
-    }
+    },
+    {
+        "galleryImages": [
+              {
+              "name": "Be Plastic Clever",
+              "image": {
+                      "alt": "image_one",
+                      "source": "https://res.cloudinary.com/dk-hub/image/upload/q_75,c_limit,f_auto,w_3514,h_1528/dk-core-nonprod/9780241447079/9780241447079_cover.jpg"
+                  }
+              },
+              {
+              "name": "Huw's Journal",
+              "image": {
+                      "alt": "image_two",
+                      "source": "https://res.cloudinary.com/dk-hub/image/upload/q_75,c_limit,f_auto,w_1940,h_1532/dk-core-nonprod/9780241447079/9780241447079_spread_1.jpg"
+                  }
+              },
+              {
+              "name": "Introduction",
+              "image": {
+                      "alt": "image_three",
+                      "source": "https://res.cloudinary.com/dk-hub/image/upload/q_75,c_limit,f_auto,w_1940,h_1532/dk-core-nonprod/9780241447079/9780241447079_spread_2.jpg"
+                  }
+              },
+              {
+              "name": "Budget Compost Bin Solutions",
+              "image": {
+                      "alt": "image_three",
+                      "source": "https://res.cloudinary.com/dk-hub/image/upload/q_75,c_limit,f_auto,w_1940,h_1532/dk-core-nonprod/9780241447079/9780241447079_spread_3.jpg"
+                  }
+              }
+        ]
+      }
 ]
