@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
-import Data from './Data.json';
 import "./slide.css";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaChevronLeft } from 'react-icons/fa'
 
-export default function Carousel( { onClose, number } ) {
+export default function Carousel( { onClose, number, imageData } ) {
 
     const [current, setCurrent] = useState(0);
-    const galery = Data[number].galleryImages;
-    
+    const galery = imageData[number].galleryImages;
+
     const SLIDER_STYLE = {
         position: 'relative',
         display: '',
@@ -72,7 +71,7 @@ export default function Carousel( { onClose, number } ) {
                     return (
                         <div className={i === current ? 'slide active' : 'slide'} key={i+"current slide"}>
                         {i === current && (
-                            <img className="carousel-image" src={galery[i].image.source} alt={galery[i].image.alt}/>
+                            <img className="carousel-image" src={slide.image.source} alt={slide.image.alt}/>
                         )}
                         </div>
                     )
@@ -87,7 +86,7 @@ export default function Carousel( { onClose, number } ) {
                 <div className="thumb-collection">
                     {galery.map((thumb, i) => {
                         return (
-                            <span className={"thump-container " + (current === i ? 'red-border' : '')} style={{backgroundImage: "url(" + galery[i].image.source.replace("q_75,c_limit,f_auto,w_1940,h_1532", "q_75,c_limit,f_auto,w_85,h_85") + ")"}} key={i+"thumb slide"} onClick={() => setCurrent(i)}></span>
+                            <span className={"thump-container " + (current === i ? 'red-border' : '')} style={{backgroundImage: "url(" + thumb.image.source.replace("q_75,c_limit,f_auto,w_1940,h_1532", "q_75,c_limit,f_auto,w_85,h_85") + ")"}} key={i+"thumb slide"} onClick={() => setCurrent(i)}></span>
                         )
                     })
                     }

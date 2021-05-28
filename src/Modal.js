@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { FaTimesCircle } from 'react-icons/fa'
-// import Data from './Data.json';
+import { FaTimesCircle } from 'react-icons/fa';
 
 const MODAL_STYLES = {
     position: 'fixed',

@@ -60,7 +60,7 @@ $base-color-teal: #00aed8;
      width: 100%;
      height: 100%;
      background-size: cover;
-     filter: blur(5px) opacity(30%);
+     filter: blur(15px) opacity(30%);
      background-position: center;
  }
 
@@ -101,6 +101,7 @@ $base-color-teal: #00aed8;
  }
  .thump-container {
      display: block;
+     cursor: pointer;
      width: 45px;
      height: 45px;
      margin: 0 5px;
