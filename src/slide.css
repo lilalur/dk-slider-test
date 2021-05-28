@@ -14,6 +14,32 @@
           transform: translate(0, 0);
 }
 
+.pagination-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  fontSize: 3rem;
+  color: #00aed8;
+}
+
+.pagination-arrow:hover {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  color: rgba(0, 174, 216, 0.65);
+}
+
+.closing-cross {
+  cursor: pointer;
+  position: fixed;
+  color: #000;
+}
+
+.closing-cross:hover {
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  color: #fa3535;
+}
+
 .carousel-image {
   height: 40vw;
 }

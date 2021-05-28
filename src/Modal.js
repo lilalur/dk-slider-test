@@ -25,12 +25,9 @@ const OVERLAY_STYLES = {
 }
 
 const CLOSING_STYLE = {
-    cursor: 'pointer',
-    position: 'fixed',
     top: '12%',
     right: '2%',
     fontSize: '2.5rem',
-    color: '#000',
     userSelect: 'none',
     zIndex: 1000
 }
@@ -41,7 +38,7 @@ export default function Modal( { open, children, onClose } ) {
         <>
             <div style={OVERLAY_STYLES}/>
             <div style={MODAL_STYLES}>
-                <FaTimesCircle style={CLOSING_STYLE} onClick={onClose} />
+                <FaTimesCircle className="closing-cross" style={CLOSING_STYLE} onClick={onClose} />
                     {children}
             </div>
         </>,

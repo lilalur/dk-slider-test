@@ -1,3 +1,5 @@
+$base-color-red: #fa3535;
+$base-color-teal: #00aed8;
 
 .slide {
     opacity: 0.5;
@@ -9,6 +11,28 @@
         transform: translate(0, 0);
     }
 }
+
+ .pagination-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    fontSize: 3rem;
+    color: $base-color-teal;
+    &:hover {
+        transition-duration: 1s;
+        color: rgba($base-color-teal, 0.65);
+    }
+ }
+
+ .closing-cross {
+    cursor: pointer;
+    position: fixed;
+    color: #000;
+    &:hover {
+        transition-duration: 0.2s;
+        color: $base-color-red;
+    }  
+ }
  
  .carousel-image {
     height: 40vw;
@@ -39,6 +63,7 @@
      filter: blur(5px) opacity(30%);
      background-position: center;
  }
+
  .title-collection {
      position: absolute;
      bottom: 100px;
@@ -60,7 +85,7 @@
  }
  .title-back-text {
      font-family: arial,sans-serif;
-     color: #fa3535;
+     color: $base-color-red;
      cursor: pointer;
      margin: 0;
      z-index: 1001;
@@ -84,7 +109,7 @@
      background-position: center center;
   }
   .red-border {
-      border: 1px solid #fa3535;
+      border: 1px solid $base-color-red;
   }
  .thumb-counter {
      position: fixed;

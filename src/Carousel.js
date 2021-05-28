@@ -34,11 +34,7 @@ export default function Carousel( { onClose, number } ) {
     //     backgroundPosition: 'center'
     // }
     const ARROW = {
-        cursor: 'pointer',
-        position: 'absolute',
-        top: '50%',
         fontSize: '3rem',
-        color: '#00aed8',
         userSelect: 'none'
     }
     const LEFT_ARROW = {
@@ -64,12 +60,12 @@ export default function Carousel( { onClose, number } ) {
     const nextSlide = () => {
         setCurrent(current === galery.length - 1 ? 0 : current + 1)
     }
-    
+
     return (
         <>
             <section style={SLIDER_STYLE}>
-                <FaArrowAltCircleLeft style={{...LEFT_ARROW, ...ARROW}} onClick={pervSlide}  />
-                <FaArrowAltCircleRight style={{...RIGHT_ARROW, ...ARROW}} onClick={nextSlide}  />
+                <FaArrowAltCircleLeft className="pagination-arrow" style={{...LEFT_ARROW, ...ARROW}} onClick={pervSlide}  />
+                <FaArrowAltCircleRight className="pagination-arrow" style={{...RIGHT_ARROW, ...ARROW}} onClick={nextSlide}  />
                 <span className="blured-background" style={{backgroundImage: "url(" + galery[current].image.source.replace("q_75,c_limit,f_auto,w_1940,h_1532", "q_75,c_limit,f_auto,w_45,h_45") + ")"}}></span>
                 {galery.map((slide, i) => {
                     {/* console.log(galery[i].image.source) */}
