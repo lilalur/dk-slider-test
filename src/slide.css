@@ -139,6 +139,7 @@
   width: 45px;
   height: 45px;
   margin: 0 5px;
+  border: 1px solid transparent;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
