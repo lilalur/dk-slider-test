@@ -13,14 +13,15 @@ $base-color-teal: #00aed8;
 }
 
  .pagination-arrow {
+    z-index: 90;
     cursor: pointer;
     position: absolute;
     top: 50%;
     fontSize: 3rem;
-    color: $base-color-teal;
+    color: rgba($base-color-teal, 0.45);
     &:hover {
         transition-duration: 1s;
-        color: rgba($base-color-teal, 0.65);
+        color: rgba($base-color-teal, 0.85);
     }
  }
 
@@ -35,19 +36,8 @@ $base-color-teal: #00aed8;
  }
  
  .carousel-image {
-    height: 40vw;
-    @media (min-width: 768px) {
-            height: 50vw;
-    }
-    @media (min-width: 992px) {
-            height: 45vw;
-    }
-    @media (min-width: 1200px) {
-            height: 40vw;
-    }
-    @media (min-width: 1600px) {
-            height: 35vw;
-    }
+    margin-top: 80px;
+    height: 85vh;
  }
 
  .blured-background {
@@ -62,6 +52,17 @@ $base-color-teal: #00aed8;
      background-size: cover;
      filter: blur(15px) opacity(30%);
      background-position: center;
+ }
+
+ .thumb-counter {
+    position: absolute;
+    bottom: 60px;
+    right: 15px;
+    font-family: arial,sans-serif;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 50px 15px;
  }
 
  .title-collection {
@@ -113,13 +114,3 @@ $base-color-teal: #00aed8;
   .red-border {
       border: 1px solid $base-color-red;
   }
- .thumb-counter {
-     position: fixed;
-     bottom: 6%;
-     right: 15px;
-     font-family: arial,sans-serif;
-     color: #000;
-     font-size: 1.2rem;
-     font-weight: 400;
-     margin: 50px 15px;
- }

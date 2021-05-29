@@ -15,17 +15,18 @@
 }
 
 .pagination-arrow {
+  z-index: 90;
   cursor: pointer;
   position: absolute;
   top: 50%;
   fontSize: 3rem;
-  color: #00aed8;
+  color: rgba(0, 174, 216, 0.45);
 }
 
 .pagination-arrow:hover {
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
-  color: rgba(0, 174, 216, 0.65);
+  color: rgba(0, 174, 216, 0.85);
 }
 
 .closing-cross {
@@ -41,31 +42,8 @@
 }
 
 .carousel-image {
-  height: 40vw;
-}
-
-@media (min-width: 768px) {
-  .carousel-image {
-    height: 50vw;
-  }
-}
-
-@media (min-width: 992px) {
-  .carousel-image {
-    height: 45vw;
-  }
-}
-
-@media (min-width: 1200px) {
-  .carousel-image {
-    height: 40vw;
-  }
-}
-
-@media (min-width: 1600px) {
-  .carousel-image {
-    height: 35vw;
-  }
+  margin-top: 80px;
+  height: 85vh;
 }
 
 .blured-background {
@@ -82,6 +60,17 @@
   -webkit-filter: blur(15px) opacity(30%);
           filter: blur(15px) opacity(30%);
   background-position: center;
+}
+
+.thumb-counter {
+  position: absolute;
+  bottom: 60px;
+  right: 15px;
+  font-family: arial,sans-serif;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 50px 15px;
 }
 
 .title-collection {
@@ -148,16 +137,5 @@
 
 .red-border {
   border: 1px solid #fa3535;
-}
-
-.thumb-counter {
-  position: fixed;
-  bottom: 6%;
-  right: 15px;
-  font-family: arial,sans-serif;
-  color: #000;
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin: 50px 15px;
 }
 /*# sourceMappingURL=slide.css.map */

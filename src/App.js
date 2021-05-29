@@ -10,6 +10,8 @@ export default function App() {
   const [galerySwitcher, setGalerySwitcher] = useState(0)
   const [imageSourceData, setImageSourceData] = useState(Data)
 
+
+
   useEffect(() => {
       fetchImageCollection();
   }, []);
@@ -37,7 +39,7 @@ export default function App() {
       <div>
         {/* list all the images from the API and use as a thumbnail to open the carousel(s) as a modal for aech */}
         {imageSourceData.map((cover, i) => (
-          <img style={COVER_IMAGE_HOME} src={cover.galleryImages[0].image.source} alt="alt" onClick={() => whichGalery(i)} key={cover.galleryImages[0].image.alt+i}/>
+          <img style={COVER_IMAGE_HOME} src={cover.galleryImages[0].image.source} alt="alt" onClick={() => whichGalery(i)} alt={cover.galleryImages[0].name} key={cover.galleryImages[0].image.alt+i}/>
         ))}
         <Modal open={isOpen} onClose={() => setIsOpen(false)}>
             <Carousel imageSourceData={imageSourceData} galeryNumber={galerySwitcher} onClose={() => setIsOpen(false)} />

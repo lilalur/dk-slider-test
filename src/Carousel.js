@@ -69,7 +69,7 @@ export default function Carousel( { onClose, galeryNumber, imageSourceData } ) {
                     return (
                         <div className={i === current ? 'slide active' : 'slide'} key={i+"current slide"}>
                         {i === current && (
-                            <img className="carousel-image" src={slide.image.source} alt={slide.image.alt}/>
+                            <img className="carousel-image" src={slide.image.source} alt={slide.name}/>
                         )}
                         </div>
                     )
@@ -77,7 +77,7 @@ export default function Carousel( { onClose, galeryNumber, imageSourceData } ) {
             </section>
             <nav style={NAVIGATION_STYLE}>
                 <div className="title-collection">
-                    <img className="title-cover-image" style={IMAGE_COVER_STYLE} src={galery[0].image.source} alt={galery[0].image.alt}/>
+                    <img className="title-cover-image" style={IMAGE_COVER_STYLE} src={galery[0].image.source} alt={galery[0].name+" cover thumbnail"}/>
                     <p className="title-bold-text">{galery[0].name}</p>
                     <p className="title-back-text" onClick={onClose} ><FaChevronLeft className="title-back-text"/>Back to the Book</p>
                 </div>
