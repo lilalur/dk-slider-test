@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import "./slide.css";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaChevronLeft } from 'react-icons/fa'
 
-export default function Carousel( { onClose, number, imageData } ) {
+export default function Carousel( { onClose, galeryNumber, imageSourceData } ) {
 
     const [current, setCurrent] = useState(0);
-    const galery = imageData[number].galleryImages;
+    const galery = imageSourceData[galeryNumber].galleryImages;
 
     const SLIDER_STYLE = {
         position: 'relative',
@@ -28,7 +28,7 @@ export default function Carousel( { onClose, number, imageData } ) {
     //     width: '100%',
     //     height: '100%',
     //     backgroundSize: 'cover',
-    //     filter: 'blur(5px) opacity(5%)',
+    //     filter: 'blur(15px) opacity(30%)',
     //     backgroundPosition: 'center'
     // }
     const ARROW = {
